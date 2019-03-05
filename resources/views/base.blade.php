@@ -13,7 +13,7 @@
     <!-- Canonical -->
     <link rel="canonical" href="">
 
-    <title>Latihan Laravel 5.4 - Anak IT</title>
+    <title>Latihan Laravel 5.4</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
@@ -43,10 +43,16 @@
                 <a href="/">Anak IT - Home</a>
             </li>
             <li>
+                <a href="http://localhost:8000/login/">- Login</a>
+            </li>
+            <li>
                 <a href="http://localhost:8000/kontak/create">- Tambah Kontak</a>
             </li>
             <li>
                 <a href="http://localhost:8000/kontak/">- Daftar Kontak</a>
+            </li>
+            <li>
+                <a href="http://localhost:8000/email/">- Email</a>
             </li>
         </ul>
     </aside>

@@ -5,34 +5,28 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Latihan Laravel -  Edit Kontak</h1>
+            <h1>Latihan Laravel -  Edit File</h1>
             <hr>
-            @foreach($data as $datas)
-            <form action="{{ route('kontak.update', $datas->id) }}" method="post">
+            <form action="{{ route('file.update', $data->id) }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 {{ method_field('PUT') }}
                 <div class="form-group">
                     <label for="nama">Nama:</label>
-                    <input type="text" class="form-control" id="usr" name="nama" value="{{ $datas->nama }}">
+                    <input type="text" class="form-control" id="usr" name="name" value="{{ $data->name }}">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" value="{{ $datas->email }}">
+                    <label for="email">Foto Lama:</label>
+                    <img src="{{ url('uploads/file/'.$data->file) }}" style="width: 150px; height: 150px;">
                 </div>
                 <div class="form-group">
-                    <label for="nohp">No Hp:</label>
-                    <input type="text" class="form-control" id="nohp" name="nohp" value="{{ $datas->nohp }}">
-                </div>
-                <div class="form-group">
-                    <label for="alamat">Alamat:</label>
-                    <textarea class="form-control" id="alamat" name="alamat">{{ $datas->alamat }}</textarea>
+                    <label for="email">File:</label>
+                    <input type="file" class="form-control" id="email" name="file">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>
                 </div>
             </form>
-            @endforeach
         </div>
         <!-- /.content -->
     </section>
